@@ -5,6 +5,9 @@ describe("Fizzbuzz tests", () => {
     const returnData = ["1", "2", "fizz"];
     expect(fizzBuzz.fizzBuzz(3)).toEqual(returnData);
   });
+  it("Should data when 7 is provided", () => {
+    expect(fizzBuzz.fizzbuzzFn(7)).toEqual('7');
+  });
   it("Should data when 4 is provided", () => {
     const returnData = ["1", "2", "fizz", "4"];
     expect(fizzBuzz.fizzBuzz(4)).toEqual(returnData);

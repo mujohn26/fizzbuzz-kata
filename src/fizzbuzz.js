@@ -1,26 +1,21 @@
-function fizzBuzz(n) {
-    const charArr = [];
-    for (let i = 1; i <= n; i++) {
-       const solution= fizzbuzzFn(i)
-       charArr.push(solution)
-    }
-    return charArr;
+function fizzbuzz(n) {
+    return new Array(n).fill(undefined).map((value,index)=>{
+       return FizzbuzzFunction(index+1)
+    })
 }
 
-function fizzbuzzFn(i) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        return 'fizzbuzz';
-    }
-    else if (i % 3 === 0 || i.toString(10).split('').includes('3')) {
-        return 'fizz';
-    }
-    else if (i % 5 === 0) {
-        return 'buzz';
-    }
-    else {
-        return `${i}`;
-    }
 
-
+function FizzbuzzFunction(n) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    return "fizzbuzz";
+  } else if (n % 3 === 0 || n.toString().split("").includes("3")) {
+    return "fizz";
+  } else if (n % 5 === 0) {
+    return "buzz";
+  } else {
+    return `${n}`;
+  }
 }
-module.exports = {fizzBuzz, fizzbuzzFn};
+
+
+module.exports = { FizzbuzzFunction,fizzbuzz };
